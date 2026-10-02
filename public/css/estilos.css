@@ -1,0 +1,246 @@
+/* Paso 1 — Cuerpo */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Paso 2 — Header */
+.encabezado {
+  background: #1a1a2e;
+  color: #f4f7fb;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.encabezado p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #cfd8e3;
+}
+
+/* Paso 3 — Nav y Menú Desplegable (Dropdown) */
+.menu {
+  background: #4355bd;
+  display: flex;
+  justify-content: center;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenedor Desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #3647a4;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border-radius: 0;
+}
+
+.dropdown-content a:hover {
+  background-color: #2b3884;
+}
+
+/* Mostrar el menú al pasar el cursor */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Paso 4 — Cajas */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.caja {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.lateral {
+  flex: 0 1 250px;
+}
+
+/* Estilos del Formulario de Contacto y Login */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.campo-form label {
+  font-weight: bold;
+  color: #0d409f;
+  font-size: 0.9rem;
+}
+
+.campo-form input,
+.campo-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  box-sizing: border-box; /* Asegura que el padding no desborde el input */
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  outline: none;
+  border-color: #4355bd;
+  box-shadow: 0 0 5px rgba(67, 85, 189, 0.3);
+}
+
+/* Paso 5 — Footer */
+.pie {
+  background: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.pie p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+/* Paso 6 — Detalles */
+h2 {
+  color: #0d409f;
+}
+
+.caja ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.caja li {
+  position: relative;
+  margin-bottom: 6px;
+  padding-left: 28px;
+}
+
+.caja li::before {
+  content: "✔";
+  color: #0d9f6e;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.caja h2 {
+  position: relative;
+  padding-left: 14px;
+}
+
+.caja h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 5px;
+  height: 1.1em;
+  background: #9f4f0d;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #0a1a2e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #0a1a2e;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.35s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #0d9f6e;
+  border-color: #2a9f0d;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    background-color: #324194;
+    left: 0;
+    transform: none;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    padding: 20px 10px;
+  }
+
+  .contenido {
+    padding: 0 10px;
+    margin: 15px auto;
+  }
+
+  .caja {
+    padding: 15px;
+  }
+}
