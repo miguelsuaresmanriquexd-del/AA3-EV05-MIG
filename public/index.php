@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 session_start();
 $base = dirname(__DIR__);
 
@@ -158,27 +157,3 @@ $aviso = 'mb-6 text-xs font-medium text-zinc-700 bg-zinc-100 border border-zinc-
 <?php endif; ?>
 </body>
 </html>
-=======
-// Enrutador Principal MVC para Futuro Inversión
-
-// 1. Cargar controladores necesarios
-require_once __DIR__ . '/../app/controllers/HomeController.php';
-require_once __DIR__ . '/../app/controllers/LoginController.php';
-
-// 2. Leer la acción de la URL
-$page = $_GET['page'] ?? 'home';
-
-// 3. Enrutamiento mediante controladores
-switch ($page) {
-    case 'login':
-        $controlador = new LoginController();
-        $controlador->index();
-        break;
-
-    case 'home':
-    default:
-        $controlador = new HomeController();
-        $controlador->index();
-        break;
-}
->>>>>>> 04e403dd66e2391ced03e1415f39bbe388413d0e
